@@ -612,6 +612,7 @@ color: #1b1b1b !important;
   background: #fff;
   border-radius: 4px;
   padding: 30px;
+  min-height: 310px;
   margin-bottom: 30px;
 }
 .box-feature [class^="flaticon-"] {
@@ -1262,4 +1263,22 @@ a.btn:hover {
   .btn-group {
     flex-direction: column; /* Boutons en colonne pour les petits écrans */
   }
+}
+
+/* Style de base de la section */
+.about {
+  position: relative;
+  z-index: 1;
+}
+
+/* Création d'un pseudo-élément pour la superposition */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.598); /* Couleur noire avec 50% de transparence */
+  z-index: -1;
 }
