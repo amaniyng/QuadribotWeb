@@ -387,3 +387,50 @@ $('#scrollToTop').on('mouseenter', function() {
 $('#scrollToTop').on('mouseleave', function() {
   timeout = setTimeout(hideScrollButton, 3000); // Définir un délai de 3 secondes avant de cacher le bouton
 });
+
+
+// script.js
+
+// Smooth scrolling for navigation links
+$(document).ready(function(){
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+  });
+  
+  // Intersection Observer for animations
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        if (entry.target.classList.contains('about-title') || entry.target.classList.contains('about-text')) {
+          entry.target.classList.add('animate__slideInLeft', 'animate__slow');
+        } else if (entry.target.classList.contains('header-content h1') || entry.target.classList.contains('header-content p')) {
+          entry.target.classList.add('animate__fadeInDown', 'animate__slow');
+        } else if (entry.target.classList.contains('portfolio-item')) {
+          entry.target.classList.add('animate__zoomIn', 'animate__slow');
+        } else if (entry.target.classList.contains('testimonial-item')) {
+          entry.target.classList.add('animate__slideInUp', 'animate__slow');
+        } else if (entry.target.classList.contains('blog-post')) {
+          entry.target.classList.add('animate__slideInUp', 'animate__slow');
+        } else if (entry.target.classList.contains('team-member')) {
+          entry.target.classList.add('animate__zoomIn', 'animate__slow');
+        } else if (entry.target.classList.contains('header-content a')) {
+          entry.target.classList.add('animate__bounceIn', 'animate__slow');
+        } else {
+          entry.target.classList.add('animate__fadeIn', 'animate__slow');
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // Observe all elements with 'animate__animated' class
+  document.querySelectorAll('.animate__animated').forEach(element => {
+    observer.observe(element);
+  });
+});

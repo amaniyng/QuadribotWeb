@@ -32,15 +32,14 @@
 body{
     background-color: #FAFAFA;
     margin:0;
-    font-family: "Roboto", sans-serif !important;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 .project
 {
   background-color: #fcf9f7;
   padding: 20px;
-  height: 75vh;
+  height: 90vh;
 }
 
 
@@ -970,8 +969,10 @@ section .progress-bar {
 /*responsive carousel*/
 #container {
 	height: 100vh;
-	display: grid;
-	place-items: center
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: start;
 }
 #slider-container {
 	height: 75%;
@@ -1027,14 +1028,14 @@ section .progress-bar {
 #slider-container #slider .slide {
   display: flex;
   flex-direction: column;
-	height: 55%;
-	margin: auto 10px;
+  height: 26em;
+  margin: auto 10px;
   padding: 5px;
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
-	display: grid;
-	place-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+  display: grid;
+  place-items: center;
 }
 
 
@@ -1051,11 +1052,15 @@ section .progress-bar {
   width: 100%; /* Make image fully occupy its container */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Circular shape */
+  margin-top: 104px;
 }
 @media (max-width: 768px) {
   .one-half.img {
     width: 100%; /* Full width on smaller screens */
   }
+  .one-half.img img {
+    transform: translateY(-132px);
+}
 }
 
 
@@ -1344,4 +1349,256 @@ a.btn:hover {
   bottom: 0;
   background: rgba(0, 0, 0, 0.598); /* Couleur noire avec 50% de transparence */
   z-index: -1;
+}
+
+
+
+
+
+
+/*********************************************************************** 
+
+	Object: Product Header
+
+	Note: use the header as:
+	<div class="qb-prod-header3" style="background: url('/assets/img/path/to/image.webp') no-repeat; background-size: auto auto; background-position: center center;">
+
+************************************************************************/
+
+
+
+
+.qb-product-header {
+  display: block;
+  box-sizing: border-box;
+
+  min-width: 100vw !important;
+  max-height: 95vh;
+  min-height: 50vh;
+  height: 95vh;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+
+  /* padding: 3rem!important; */
+  /* padding-bottom: 75%; */
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+}
+
+/*********************************************************************** 
+
+    Object: Product Splahscreen information
+
+
+    Note: use the header as:
+    <div class="qb-prod-header3" style="background: url('/assets/img/path/to/image.webp') no-repeat; background-size: auto auto; background-position: center center;">
+
+************************************************************************/
+.qb-product-info {
+  position: absolute;
+  top: 10%;
+  left: 5vw;
+  color: var(--white-color);
+  margin: 0 auto auto 3vw;
+  transition: 0.3s ease;
+}
+
+.qb-product-info .description {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--black);
+
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  width: 600px;
+  max-width: 90vw;
+  padding: 25px;
+
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow);
+
+  transform: translateX(0);
+  transition: 1s ease;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.qb-product-info .description p {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+
+.qb-product-info .description {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--black);
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  width: 600px;
+  max-width: 90vw;
+  padding: 25px;
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow);
+  transform: translateX(0);
+  transition: 1s ease;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.qb-product-info .description .read-btn {
+  border: none;
+  outline: none;
+  background: var(--white-color);
+  color: var(--dark-color);
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 4px 25px;
+  align-items: center;
+  margin-top: 20px;
+  max-width: 180px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.buttons-main{
+    display: flex;
+    flex-direction: row;
+  }
+
+.qb-product-info .subtitle {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.qb-product-specification-card {
+  background-color: rgba(40, 40, 40, 0.4);
+  border-radius: 10px;
+  align-items: center !important;
+}
+
+.qb-product-specification-card img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*********************************************************************** 
+
+    Object: RBox Logo  
+
+************************************************************************/
+.qb-prod-logo {
+  display: block;
+  min-height: 150px;
+}
+
+.qb-prod-logo .title-logo {
+  float: left;
+  width: 120px;
+  height: 100%;
+  padding-right: 10px;
+  margin: 10px;
+}
+.qb-prod-logo .title-text {
+  color: var(--primary-color);
+  transform: translateY(0);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 auto;
+  transition: 1s ease;
+  text-shadow: var(--text-shadow);
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+.qb-prod-logo .title-subtext {
+  position: relative;
+  top: -2rem;
+  left: 60px;
+  font-size: 3rem;
+  font-weight: 300;
+  width: 100%;
+  margin: 0 auto;
+}
+.qb-prod-logo .title-subtext B {
+  color: var(--primary-color);
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 600;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  color: black;
+}
+
+.circle span {
+  position: absolute;
+}
+
+.blue {
+  border: 10px solid blue;
+  top: -60px;
+  left: -100px;
+}
+
+.yellow {
+  border: 10px solid yellow;
+  top: 20px;
+  left: 0;
+}
+
+.green {
+  border: 10px solid green;
+  top: -60px;
+  right: -100px;
+}
+
+.gray {
+  border: 10px solid gray;
+  top: 100px;
+  left: -50px;
+}
+
+.lightblue {
+  border: 10px solid lightblue;
+  top: 100px;
+  right: -50px;
 }
