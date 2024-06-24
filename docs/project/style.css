@@ -865,7 +865,7 @@ header .nav-bar {
     font-size: 0.9em;
   }
 }
-* style.css */
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -876,7 +876,7 @@ body {
 }
 
 .header {
-  background: url('img/Aliaxis.jpeg') no-repeat center center/cover;
+  background: url('img/Aliaxis.jpg') no-repeat center center/cover;
   height: 100vh;
   color: rgb(0, 0, 0);
   text-align: center;

@@ -1639,6 +1639,7 @@ a.btn:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   font-size: 1.1rem; /* Adjusted font size for larger circles */
   background-color: white;
   font-family: 'Arial', sans-serif;
@@ -1685,4 +1686,30 @@ a.btn:hover {
   .ring.red { z-index: 1; }
   .ring.yellow { z-index: 1; }
   .ring.green { z-index: 1; }
+}
+
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: relative;
+}
+.marquee-content {
+  display: flex;
+  width: fit-content;
+  animation: marquee 20s linear infinite;
+}
+.marquee-content img {
+  height: 100px; /* Ajustez cette valeur selon la taille souhaitée des images */
+  vertical-align: middle;
+  margin-right: 2rem; /* Espace entre les images */
+}
+@keyframes marquee {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%);
+  }
 }
