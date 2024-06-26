@@ -106,19 +106,29 @@ h1
 
   .ftco-about .one-half {
     width: 100%;
-    padding: 30px 15px; }
+    padding: 60px 15px; }
     @media (min-width: 768px) {
       .ftco-about .one-half {
         padding: 5%;
         width: 50%; } }
     .ftco-about .one-half.img {
-      display: block; 
-      background-repeat: no-repeat;
+     
     
     }
-      @media (max-width: 767.98px) {
-        .ftco-about .one-half.img {
-          height: 300px; } }
+    @media (max-width: 767.98px) {
+      .ftco-about .one-half.img {
+          height: 430px;
+          width: 100%;
+      }
+      .one-half.img img {
+        position: absolute;
+        width: 900px !important;
+        /* bottom: 27px; */
+        height: auto;
+        /* border-radius: 50%; */
+    }
+  }
+      
   .container {
     width: 100%;
     padding-right: 15px;
@@ -1053,19 +1063,21 @@ section .progress-bar {
   align-items: center;
 }
 .one-half.img img {
-  width: 100%; /* Make image fully occupy its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Circular shape */
-  margin-top: 104px;
+  position: absolute;
+  width: 50%;
+  /* bottom: 27px; */
+  height: auto;
+  /* border-radius: 50%; */
+  /* margin-top: 104px;
 }
 @media (max-width: 768px) {
   .one-half.img {
     width: 100%; /* Full width on smaller screens */
   }
   .one-half.img img {
-    transform: translateY(-132px);
+  
 }
-}
+
 
 
 
@@ -1625,7 +1637,7 @@ a.btn:hover {
 
 .olympic-logo {
   position: relative;
-  width: 720px; /* Adjusted to accommodate larger circles */
+  width: 764px; /* Adjusted to accommodate larger circles */
   height: 460px; /* Adjusted to accommodate larger circles */
   display: flex;
   justify-content: center;
@@ -1636,7 +1648,7 @@ a.btn:hover {
 .ring {
   width: 200px;
   height: 200px;
-  border: 20px solid;
+  border: 16px solid;
   border-radius: 50%;
   position: absolute;
   display: flex;
@@ -1652,11 +1664,10 @@ a.btn:hover {
 }
 
 .ring span {
-  display: inline-block;
   width: 100%;
- 
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(78, 77, 77);
 }
 
 .ring.blue { border-color: #0085C7; top: 0; left: 60px; }
@@ -1665,25 +1676,32 @@ a.btn:hover {
 .ring.yellow { border-color: #F4C300; top: 120px; left: 170px; z-index: -1; }
 .ring.green { border-color: #009F3D; top: 120px; left: 390px; z-index: -1; }
 
+
+
 @media (max-width: 600px) {
   .olympic-logo {
-      width: 100px;
-      height: auto;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+    width: 200px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
   .ring {
-      width: 70px;
-      height: 70px;
-      border-width: 6px;
-      font-size: 0.65rem;
-      margin: 5px 0;  /* Reduced margin to bring the rings closer */
-      position: static;
+    width: 200px;
+    height: 200px;
+    border-width: 12px;
+    font-size: 0.65rem;
+    margin: 5px 0;  /* Reduced margin to bring the rings closer */
+    position: static;
   }
   .ring span {
-      width: 100%;
-      white-space: nowrap;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(78, 77, 77);
   }
   .ring.blue { z-index: 1; }
   .ring.black { z-index: 1; }
