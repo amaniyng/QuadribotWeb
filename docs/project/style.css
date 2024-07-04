@@ -1009,7 +1009,7 @@ footer {
 }
 .serviceBox .read-more{
   color: #FB374D;
-  font-size: 15px;
+  font-size: 15.5px;
   transition: all 0.3s ease 0s;
 }
 .serviceBox .read-more:hover{ text-shadow: 4px 4px rgba(255,255,255,0.3); }
