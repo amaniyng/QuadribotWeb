@@ -1039,7 +1039,7 @@ section .progress-bar {
 #slider-container #slider .slide {
   display: flex;
   flex-direction: column;
-  height: 24em;
+  height:  480px;
   margin: auto 10px;
   padding: 5px;
   background-color: #ffffff;

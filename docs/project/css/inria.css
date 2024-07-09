@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-section, .features-section {
+    padding: 50px 0;
+}
+
+.custom-section {
+    background-color: #ffffff;
+}
+
+.features-section {
+    background-color: #f9f9f9;
+}
+
+.feature-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.custom-img-size {
+    max-width: 357px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.intro-section img {
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+}
+
+.feature-box img {
+    margin-bottom: 15px;
+}
+
+.title-section, .title-section-top1 {
+    color: #003366;
+    font-weight: bold;
+}
+
+.title-section {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.title-section-top1 {
+    color: #006699;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.description-section {
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.card-title {
+    color: #006699;
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+/* Add animation styles */
+.animation-from-left {
+    animation: slide-in-left 0.5s forwards;
+}
+
+.animation-from-bottom {
+    animation: slide-in-bottom 0.5s forwards;
+}
+
+.animation-from-top {
+    animation: slide-in-top 0.5s forwards;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-top {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
