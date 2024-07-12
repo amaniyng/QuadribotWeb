@@ -950,14 +950,17 @@ body {
 }
 
 .header {
-  background: url('img/Aliaxis.jpg') no-repeat center center/cover;
-  height: 1000px;
+  background: url(img/Aliaxis.jpg) no-repeat center center;
+  background-size: contain;
+  height: 600px;
   color: rgb(0, 0, 0);
   text-align: center;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .header img{
 width: 100%;
