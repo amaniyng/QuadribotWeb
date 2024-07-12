@@ -26,11 +26,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-.hero-text {
-    max-width: 600px;
-}
+
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -51,19 +49,22 @@ body {
 }
 .feature-box {
     background: white;
+    display: flex;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 .feature-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 .feature-box img {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     transition: transform 0.3s ease;
 }
 .feature-box:hover img {
